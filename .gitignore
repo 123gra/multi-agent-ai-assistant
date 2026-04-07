@@ -1,41 +1,80 @@
+# =========================
 # Python
+# =========================
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-*.db
-*.sqlite3
+*.py[cod]
 
-# Virtual Environment
+# =========================
+# Virtual Environments
+# =========================
 venv/
 env/
 .venv/
+ENV/
 
-# Environment variables
+# =========================
+# Environment Variables
+# =========================
 .env
+.env.*
 
+# =========================
+# Database Files
+# =========================
+*.db
+*.sqlite3
+
+# =========================
 # Logs
+# =========================
 *.log
 
-# OS files
+# =========================
+# OS Files
+# =========================
 .DS_Store
 Thumbs.db
 
-# VS Code / Codespaces
+# =========================
+# IDE / Editor
+# =========================
 .vscode/
+.idea/
 *.code-workspace
 
-# Build / cache
+# =========================
+# Build / Distribution
+# =========================
 build/
 dist/
 *.egg-info/
+.eggs/
 
+# =========================
 # Docker
+# =========================
 *.tar
 
-# GitHub
+# =========================
+# GitHub / CI
+# =========================
 .github/
 
+# =========================
+# System / Codespaces Junk
+# =========================
+bin/
+lib/
+include/
+lib64/
+share/
+google-cloud-sdk/
+
+# =========================
 # Misc
+# =========================
 *.swp
 *.swo
