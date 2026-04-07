@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multi-Agent AI Assistant</title>
+</head>
+<body style="font-family: Arial; padding: 40px;">
+
+    <h2> Multi-Agent AI Assistant</h2>
+
+    <input id="query" type="text" placeholder="Enter your request..." style="width: 300px; padding: 10px;">
+    <button onclick="sendQuery()">Run</button>
+
+    <h3>Response:</h3>
+    <pre id="response"></pre>
+
+    <script>
+        async function sendQuery() {
+            const query = document.getElementById("query").value;
+
+            const res = await fetch("/execute", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ query })
+            });
+
+            const data = await res.json();
+            document.getElementById("response").innerText = JSON.stringify(data, null, 2);
+        }
+    </script>
+
+</body>
+</html>
